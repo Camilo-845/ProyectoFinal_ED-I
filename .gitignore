@@ -1,4 +1,6 @@
+ignore/
 
 #Ejecutables 
+
 /output
 .exe
