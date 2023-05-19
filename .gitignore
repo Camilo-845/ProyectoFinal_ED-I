@@ -3,4 +3,7 @@ ignore/
 #Ejecutables 
 
 /output
-.exe
+*.exe
+
+#Configuracion Viscual Studio
+/.vscode
