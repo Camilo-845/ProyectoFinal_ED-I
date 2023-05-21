@@ -1,6 +1,4 @@
-#include <iostream>
 #include "../../estructuras.h"
-
 #include <sstream>
 #include <iomanip>
 
@@ -35,28 +33,37 @@ void crearProducto(Producto **cabezaPtr){
 	
 	do{
 		Producto *nuevo = new Producto;
+		nuevo->sig = NULL;
 		
-		if(nuevo->sig == NULL){
+		if(*cabezaPtr == NULL){
 			nuevo->codigo = codigo;
 		}
 		else{
 			nuevo->codigo = incrementarCodigo(codigo);
 		}
 		
-		string descripcion;
 		cout << "Ingrese la descripción del producto: ";
-    	getline(cin, descripcion);
-		nuevo->descripcion = descripcion;
+		cin.ignore();
+    	getline(cin, nuevo->descripcion);
+    	cout<<endl;
 		
-		int valorUnitario;
-		cout<<"Ingrese el valor unitario del producto: ";
-		cin>>valorUnitario;
-		nuevo->valorUnitario = valorUnitario;
+		cout<<"Ingrese el valor unitario del producto";
+		cout<<endl;
+		do{
+			cout<<"(Debe ser una cantidad mayor a '0'): ";
+			cin>>nuevo->valorUnitario;
+			cout<<endl;
+		}
+		while(nuevo->valorUnitario <= 0);
 		
-		int stock;
-		cout<<"Ingrese el numero de articulos disponibles: ";
-		cin>>stock;
-		nuevo->stock = stock;
+		cout<<"Ingrese el numero de articulos disponibles";
+		cout<<endl;
+		do{
+			cout<<"(Debe ser una cantidad mayor a '0'): ";
+			cin>>nuevo->stock;
+			cout<<endl;
+		}
+		while(nuevo->stock <= 0);
 		
 		if(*cabezaPtr == NULL){								
 			*cabezaPtr = nuevo;
@@ -66,13 +73,11 @@ void crearProducto(Producto **cabezaPtr){
 			for(;iter->sig != NULL; iter = iter->sig );
 			iter->sig = nuevo;
 		}
-		nuevo->sig = NULL;
-		system("CLS");
 		
-		cout<<"Ingrese (-1) para salir del menu si desea agregar un nuevo producto ingrese(1): ";
+		system("CLS");
+		cout<<"Ingrese (-1) para salir del menu si desea agregar un nuevo producto ingrese (1): ";
 		cin>>respuesta;
 	}
-	while(respuesta != -1);
-	
+	while(respuesta != -1);	
 }
 
