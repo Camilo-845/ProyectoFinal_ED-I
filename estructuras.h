@@ -3,6 +3,12 @@
 
 using namespace std;
 
+struct Fecha{
+	int dia;
+	int mes;
+	int aniho;
+};
+
 struct Cliente{
 	string cedula;
 	string nombre;
@@ -10,12 +16,6 @@ struct Cliente{
 	int numero;
 	string email;
 	Cliente *sig;
-};
-
-struct Fecha{
-	int dia;
-	int mes;
-	int aniho;
 };
 
 struct Producto{
@@ -41,5 +41,8 @@ struct Factura{
 	Detalle *cabezaDetalle;
 	Factura *sig;
 };
+
+#include "funciones/funcionesProducto.h"
+#include "funciones/funcionesCliente.h"
 
 

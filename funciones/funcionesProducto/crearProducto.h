@@ -1,4 +1,3 @@
-#include "../../estructuras.h"
 #include <sstream>
 #include <iomanip>
 

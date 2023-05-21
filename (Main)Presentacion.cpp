@@ -1,4 +1,4 @@
-#include "funciones/funcionesProducto/funcionesProducto.h"
+#include "estructuras.h"
 #include <wchar.h>
 #include <locale.h>
 
