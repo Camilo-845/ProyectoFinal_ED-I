@@ -23,6 +23,7 @@ struct Producto{
 	string descripcion;
 	int valorUnitario;
 	int stock;
+	Producto *sig;
 };
 
 struct Detalle{
