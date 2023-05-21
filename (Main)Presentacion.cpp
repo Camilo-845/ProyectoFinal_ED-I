@@ -24,7 +24,7 @@ int main() {
 		cout<<" 		|    2. Cambiar el Precio                                          | "<<endl;
 		cout<<" 		|    3. Menu Cambiar stock: (comprar/vender)                       | "<<endl;
 		cout<<" 		|    4. Eliminar producto                                          | "<<endl;
-		cout<<" 		|    5. Menu Consultar : (Cliente/Producto/Factura)                | "<<endl;
+		cout<<" 		|    5. Menu Consultar : (Clientes/Productos/Facturas)             | "<<endl;
 		cout<<" 		|    6. Menu Buscar :  (Cliente/Producto/Factura)                  | "<<endl;
 		cout<<" 		|                                                                  | "<<endl;
 		cout<<" 		|    Para salir ingrese -1                                         | "<<endl;
@@ -55,12 +55,12 @@ int main() {
 				eliminarPrimeraAparicion(&cabeza, info);
 				break;
 			}
+			*/
 			case 5:{
-				cout<<"Digite el valor a eliminar en toda la lista: ";
-				cin>>info;
-				eliminarPrimerasApariciones(&cabeza, info);
+				menuConsultar();
 				break;
 			}
+			/*
 			case 6:{
 				ordenarPorInsercion(&cabeza);
 				break;
