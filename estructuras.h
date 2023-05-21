@@ -29,8 +29,7 @@ struct Producto
 	Producto *sig;
 };
 
-struct Detalle
-{
+struct Detalle{
 	string codigoProducto;
 	int cantidad;
 	int precio;
@@ -44,9 +43,16 @@ struct Factura
 	Fecha fechaVenta;
 	Cliente *cliente;
 	Detalle *cabezaDetalle;
+	int total;
 	Factura *sig;
 };
 
+Cliente *cabezaCliente = NULL;
+Producto *cabezaProducto = NULL;
+Detalle *cabezaDetalle = NULL;
+Factura *cabezaFactura = NULL;
+	
 #include "funciones/funcionesProducto.h"
 #include "funciones/funcionesCliente.h"
 #include "funciones/funcionesDetalle.h"
+#include "funciones/funcionesMenu.h"
