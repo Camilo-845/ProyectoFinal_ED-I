@@ -3,13 +3,15 @@
 
 using namespace std;
 
-struct Fecha{
+struct Fecha
+{
 	int dia;
 	int mes;
 	int aniho;
 };
 
-struct Cliente{
+struct Cliente
+{
 	string cedula;
 	string nombre;
 	string direccion;
@@ -18,7 +20,8 @@ struct Cliente{
 	Cliente *sig;
 };
 
-struct Producto{
+struct Producto
+{
 	string codigo;
 	string descripcion;
 	int valorUnitario;
@@ -26,7 +29,8 @@ struct Producto{
 	Producto *sig;
 };
 
-struct Detalle{
+struct Detalle
+{
 	string producto;
 	int cantidad;
 	int precio;
@@ -34,7 +38,8 @@ struct Detalle{
 	Detalle *sig;
 };
 
-struct Factura{
+struct Factura
+{
 	unsigned long int numero;
 	Fecha fechaVenta;
 	Cliente *cliente;
@@ -44,5 +49,4 @@ struct Factura{
 
 #include "funciones/funcionesProducto.h"
 #include "funciones/funcionesCliente.h"
-
-
+#include "funciones/funcionesDetalle.h"
