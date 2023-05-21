@@ -31,7 +31,7 @@ struct Producto
 
 struct Detalle
 {
-	string producto;
+	string codigoProducto;
 	int cantidad;
 	int precio;
 	int subtotal;

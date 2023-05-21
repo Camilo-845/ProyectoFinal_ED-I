@@ -15,7 +15,7 @@ void crearDetalle(Detalle **cabezaPtr, Producto *cabezaProducto)
         Producto *productoEncontrado = buscarProducto(cabezaProducto, codigoProducto);
         if (productoEncontrado != NULL)
         {
-            nuevo->producto = "AR" + codigoProducto;
+            nuevo->codigoProducto = "AR" + codigoProducto;
             cout << "Ingrese la cantidad de articulos" << endl;
             do
             {
