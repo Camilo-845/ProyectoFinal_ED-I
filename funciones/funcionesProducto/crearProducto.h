@@ -74,6 +74,7 @@ void crearProducto(Producto **cabezaPtr){
 		}
 		
 		system("CLS");
+		cout<<endl;
 		cout<<"Ingrese (-1) para salir del menu si desea agregar un nuevo producto ingrese (1): ";
 		cin>>respuesta;
 	}
