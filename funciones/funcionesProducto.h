@@ -4,3 +4,4 @@
 #include "funcionesProducto/imprimirProducto.h"
 #include "funcionesProducto/cambiarPrecioProducto.h"
 #include "funcionesProducto/cambiarStockProducto.h"
+#include "funcionesProducto/eliminarProducto.h"
