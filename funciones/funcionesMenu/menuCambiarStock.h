@@ -25,7 +25,19 @@ void menuCambiarStock(){
 		system("cls");
 		switch(respuesta){
 			case 1:{
-				//esperando comprarProducto();
+				string codigo;
+				cout<<" Ingrese el código del producto a buscar: ";
+				cin>>codigo;
+				
+				Producto *iter = buscarProducto(cabezaProducto, codigo);
+				if(iter != NULL){
+					cambiarStockProducto(iter);	
+				}
+				else{
+					cout<<"  El código del producto no se encuentra registrado."<<endl;
+					cout<<"  Porfavor registre el nuevo artículo...";
+					crearProducto(&cabezaProducto);
+				}
 				break;
 			}
 			case 2:{

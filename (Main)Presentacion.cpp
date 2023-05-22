@@ -41,7 +41,7 @@ int main() {
 			}
 			case 2:{
 				string codigo;
-				cout<<" Ingrese el codigo del producto a buscar: ";
+				cout<<" Ingrese el código del producto a buscar: ";
 				cin>>codigo;
 				
 				Producto *iter = buscarProducto(cabezaProducto, codigo);
@@ -49,8 +49,8 @@ int main() {
 					cambiarPrecioProducto(iter);	
 				}
 				else{
-					cout<<"El codigo ingresado no se encuentra en nuestra base de datos."<<endl;
-					cout<<"Porfavor intente nuevamente...";
+					cout<<"  El código del artículo no se encuentra en nuestra base de datos."<<endl;
+					cout<<"  Porfavor intente nuevamente...";
 				}
 				break;
 			}
