@@ -1,13 +1,11 @@
 
-Producto *buscarProducto(Producto *cabezaPtr, string codigo)
-{
-    for (; cabezaPtr != NULL; cabezaPtr = cabezaPtr->sig)
-    {
-        string codigoProducto = "AR" + codigo;
-        if (codigoProducto == cabezaPtr->codigo)
-        {
-            return cabezaPtr;
+Producto* buscarProducto(Producto* cabezaPtr, const string& codigo) {
+	
+    for (Producto* iter = cabezaPtr; iter != NULL; iter = iter->sig) {
+        if (codigo == iter->codigo) {
+            return iter;
         }
     }
     return NULL;
 }
+

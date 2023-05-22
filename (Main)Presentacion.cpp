@@ -39,12 +39,21 @@ int main() {
 				crearProducto(&cabezaProducto);
 				break;
 			}
-			/*case 2:{
-				cout<<"Digite el valor a insertar: ";
-				cin>>info;
-				insertarPorCola(&cabeza, info);
+			case 2:{
+				string codigo;
+				cout<<" Ingrese el codigo del producto a buscar: ";
+				cin>>codigo;
+				
+				Producto *iter = buscarProducto(cabezaProducto, codigo);
+				if(iter != NULL){
+					cambiarPrecioProducto(iter);	
+				}
+				else{
+					cout<<"El codigo ingresado no se encuentra en nuestra base de datos."<<endl;
+					cout<<"Porfavor intente nuevamente";
+				}
 				break;
-			}*/
+			}
 			case 3:{
 				menuCambiarStock();
 				break;
@@ -66,14 +75,14 @@ int main() {
 			}
 			case -1 :{
 				cout<<endl;
-				cout<<"Saliendo...."<<endl;
-				system("pause");
+				cout<<"   Saliendo...."<<endl;
+				cout<<"   ";system("pause");
 				break;
 			}
 			default:{
 				cout<<endl;
-				cout<<"Opción invalida........"<<endl;
-				system("pause");
+				cout<<"   Opción invalida........"<<endl;
+				cout<<"   ";system("pause");
 				break;
 			} 
 		}
