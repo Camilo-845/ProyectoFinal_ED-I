@@ -11,16 +11,13 @@ void imprimirCliente(Cliente *cabezaPtr){
         cout <<"       |   No se ha encontrado el usario.                             " << endl;
         cout <<"       |   Porfavor intente nuevamente....                            " << endl;
     }
-	
-	for(Cliente *iter = cabezaPtr; iter != NULL; iter = iter->sig){
+	else{
 		
-		cout<<"          _____________________________________________________________________" << endl;
-    	cout<<"         |                                                                     | " << endl;
-		cout<<"            Los datos del cliente registrado con documento ("<<iter->cedula<<") son: "<<endl<<endl;
-		cout<<"               Nombre: "<<iter->nombre<<endl;
-		cout<<"               E-mail: "<<iter->email<<endl;
-		cout<<"               Número: "<<iter->numero<<endl;
-		cout<<"               Dirección: "<<iter->direccion<<endl;
+		cout<<"            Los datos del cliente registrado con documento ("<<cabezaPtr->cedula<<") son: "<<endl<<endl;
+		cout<<"               Nombre: "<<cabezaPtr->nombre<<endl;
+		cout<<"               E-mail: "<<cabezaPtr->email<<endl;
+		cout<<"               Número: "<<cabezaPtr->numero<<endl;
+		cout<<"               Dirección: "<<cabezaPtr->direccion<<endl;
 		cout<<" 		    ------------------------                                         " << endl;
 	}
 	cout<<"       |                                                                    |" << endl;

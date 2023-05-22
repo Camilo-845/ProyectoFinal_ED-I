@@ -44,8 +44,12 @@ void menuBuscar(){
 				break;
 			}
 			case 3:{
-				//esperando buscarFactura();
-				//esperando imprimirFactura();
+				int numero;
+				cout<<" Ingrese el numero de la factura a buscar: ";
+				cin>>numero;
+					
+				Factura *iter = buscarFactura(cabezaFactura, numero);
+				imprimirFactura(iter);
 				break;
 			}
 			case -1 :{

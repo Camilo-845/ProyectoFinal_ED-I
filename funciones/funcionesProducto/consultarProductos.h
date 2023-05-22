@@ -14,7 +14,7 @@ void consultarProductos(Producto *cabezaPtr)
     	
         cout << " 		|   Código:              " << cabezaPtr->codigo << "                  " << endl;
         cout << " 		|   Descripción:         " << cabezaPtr->descripcion << "                  " << endl;
-        cout << " 		|   valor Unitario:      $ " << cabezaPtr->valorUnitario << "               " << endl;
+        cout << " 		|   valor Unitario:      $" << cabezaPtr->valorUnitario << "               " << endl;
         cout << " 		|   stock:               " << cabezaPtr->stock << "                  " << endl;
         cout << " 		|   ------------------------                                     " << endl;
     }
