@@ -1,5 +1,5 @@
 
-void crearFactura(Factura **cabezaPtr, Cliente **cabezaCliente, Producto *cabezaProducto)
+void crearFactura(Factura **cabezaPtr, Cliente **cabezaCliente, Producto **cabezaProducto)
 {
     Detalle *cabezaDetalle = NULL;
     int respuesta = 1;

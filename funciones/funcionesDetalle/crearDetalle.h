@@ -1,5 +1,5 @@
 
-void crearDetalle(Detalle **cabezaPtr, Producto *cabezaProducto)
+void crearDetalle(Detalle **cabezaPtr, Producto **cabezaProducto)
 {
     int respuesta = 1;
     do
@@ -12,31 +12,39 @@ void crearDetalle(Detalle **cabezaPtr, Producto *cabezaProducto)
         cout << "(Formato -> '0000'): ";
         cin.ignore();
         cin >> codigoProducto;
-        Producto *productoEncontrado = buscarProducto(cabezaProducto, codigoProducto);
+        Producto *productoEncontrado = buscarProducto(*cabezaProducto, codigoProducto);
         if (productoEncontrado != NULL)
         {
             nuevo->codigoProducto = "AR" + codigoProducto;
             cout << "Ingrese la cantidad de articulos" << endl;
-            do
+            if (productoEncontrado->stock == 0)
             {
-                cout << "(Debe ser una cantidad mayor a '0'): ";
-                cin >> nuevo->cantidad;
-                cout << endl;
-            } while (nuevo->cantidad <= 0);
-
-            nuevo->precio = productoEncontrado->valorUnitario;
-            nuevo->subtotal = nuevo->precio * nuevo->cantidad;
-
-            if (*cabezaPtr == NULL)
-            {
-                *cabezaPtr = nuevo;
+                cout << "No hay articulos disponibles" << endl;
+                system("pause");
             }
             else
             {
-                Detalle *iter = *cabezaPtr;
-                for (; iter->sig != NULL; iter = iter->sig)
-                    ;
-                iter->sig = nuevo;
+                do
+                {
+                    cout << "(Debe ser una cantidad mayor a '0'y menor a la cantidad en stock): ";
+                    cin >> nuevo->cantidad;
+                    cout << endl;
+                } while (nuevo->cantidad <= 0 || nuevo->cantidad > productoEncontrado->stock);
+                productoEncontrado->stock -= nuevo->cantidad;
+                nuevo->precio = productoEncontrado->valorUnitario;
+                nuevo->subtotal = nuevo->precio * nuevo->cantidad;
+
+                if (*cabezaPtr == NULL)
+                {
+                    *cabezaPtr = nuevo;
+                }
+                else
+                {
+                    Detalle *iter = *cabezaPtr;
+                    for (; iter->sig != NULL; iter = iter->sig)
+                        ;
+                    iter->sig = nuevo;
+                }
             }
         }
         else
