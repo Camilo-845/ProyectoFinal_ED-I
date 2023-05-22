@@ -58,13 +58,11 @@ int main() {
 				menuCambiarStock();
 				break;
 			}
-			/*case 4:{
-				cout<<"Digite el valor a eliminar: ";
-				cin>>info;
-				eliminarPrimeraAparicion(&cabeza, info);
+			case 4:{
+				eliminarProducto(&cabezaProducto, cabezaFactura);
+				system("pause");
 				break;
 			}
-			*/
 			case 5:{
 				menuConsultar();
 				break;
