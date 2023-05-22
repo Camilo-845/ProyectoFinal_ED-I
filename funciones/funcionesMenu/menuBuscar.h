@@ -26,13 +26,19 @@ void menuBuscar(){
 		system("cls");
 		switch(respuesta){
 			case 1:{
-				//esperando buscarCliente();
-				//esperando imprimirCliente();
+				string cedula;
+				cout<<" Digite la cedula del usurio a buscar: ";
+				cin>>cedula;
+				buscarCliente(cabezaCliente, cedula);
+				imprimirCliente(cabezaCliente);
 				break;
 			}
 			case 2:{
-				//esperando buscarProducto();
-				//esperando imprimirProducto();
+				string codigo;
+				cout<<" Ingrese el codigo del producto a buscar: ";
+				cin>>codigo;
+				buscarProducto(cabezaProducto, codigo);
+				imprimirProducto(cabezaProducto);
 				break;
 			}
 			case 3:{

@@ -19,7 +19,7 @@ void consultarClientes(Cliente *cabezaPtr)
         cout << " 		|   E-mail:         " << cabezaPtr->email << "                   " << endl;
         cout << " 		|   ------------------------                                     " << endl;
     }
-    cout << " 		|                                                                    " << endl;
+    cout << " 		|                                                                  | " << endl;
     cout << " 		|__________________________________________________________________| " << endl;
     cout<<endl;
 }
