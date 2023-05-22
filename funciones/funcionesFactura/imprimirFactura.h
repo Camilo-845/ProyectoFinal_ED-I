@@ -14,18 +14,18 @@ void imprimirFactura(Factura *cabezaPtr){
     	
 		cout<<"        _____________________________________________________________________"<<endl;
     	cout<<"       |                                                                     | "<<endl;
-    	cout<<"           La información de la factura numero (" << cabezaPtr->numero << ") es: "<<endl;
+    	cout<<"           La información de la factura número (" << cabezaPtr->numero << ") es: "<<endl;
     	cout<<"             Fecha de venta:   "<<iter->fechaVenta->dia<<"/"<<iter->fechaVenta->mes<<"/"<<iter->fechaVenta->aniho<<"                  "<<endl;
     	cout<<"             Cliente:          "<<iter->cliente->nombre<<"               "<<endl;
-    	cout<<"             Detalles:         "<<endl;	
-    	cout<<endl;
+    	cout<<"             Detalles:         "<<endl<<endl;
+    	
     	for (Detalle *jiter = iter->cabezaDetalle; jiter != NULL; jiter = jiter->sig){
         	
-			cout<<"       |    Codigo producto:    " <<iter->cabezaDetalle->codigoProducto<<endl;
-        	cout<<"       |    Cantidad:    " <<iter->cabezaDetalle->cantidad<<endl;
-        	cout<<"       |    Precio:      $" <<iter->cabezaDetalle->precio<<endl;
-        	cout<<"       |    Subtotal:    $" <<iter->cabezaDetalle->subtotal<<endl;
-        	cout<<"        ------------------------    " <<endl;
+			cout<<"-Código producto:    " <<iter->cabezaDetalle->codigoProducto<<endl;
+        	cout<<"-Cantidad:    " <<iter->cabezaDetalle->cantidad<<endl;
+        	cout<<"-Precio:      $" <<iter->cabezaDetalle->precio<<endl;
+        	cout<<"-Subtotal:    $" <<iter->cabezaDetalle->subtotal<<endl;
+        	cout<<" ------------------------    " <<endl;
     	}
     	cout<<" 		    Total:             $" << iter->total<<endl;
     }

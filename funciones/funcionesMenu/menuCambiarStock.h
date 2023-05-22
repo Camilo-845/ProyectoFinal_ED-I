@@ -42,20 +42,22 @@ void menuCambiarStock(){
 			}
 			case 2:{
 				crearFactura(&cabezaFactura, &cabezaCliente, &cabezaProducto);
+				system("pause");
 				break;
 			}
 			case -1 :{
 				cout<<endl;
 				cout<<"Saliendo...."<<endl;
+				system("pause");
 				break;
 			}
 			default:{
 				cout<<endl;
 				cout<<"Opción invalida........"<<endl;
+				system("pause");
 				break;
 			} 
 		}
-		system("pause");
 		system("cls");
 	}while(respuesta != -1);
 }

@@ -52,15 +52,15 @@ void crearProducto(Producto **cabezaPtr){
 		
 		cout<<"           Ingrese el valor unitario del producto"<<endl;
 		do{
-			cout<<"           (Debe ser una cantidad mayor a '0'): ";
+			cout<<"            (Debe ser una cantidad mayor a '0'): ";
 			cin>>nuevo->valorUnitario;
 			cout<<endl;
 		}
 		while(nuevo->valorUnitario <= 0);
 		
-		cout<<"           Ingrese el numero de articulos disponibles"<<endl;
+		cout<<"           Ingrese el número de artículos disponibles"<<endl;
 		do{
-			cout<<"           (Debe ser una cantidad mayor a '0'): ";
+			cout<<"            (Debe ser una cantidad mayor a '0'): ";
 			cin>>nuevo->stock;
 			cout<<endl;
 		}
@@ -76,7 +76,7 @@ void crearProducto(Producto **cabezaPtr){
 		}
 		
 		cout<<"     |_____________________________________________________________________________________|"<<endl;
-		cout<<"     |  Ingrese (-1) para salir del menu si desea agregar un nuevo producto ingrese (1): "; cin>>respuesta;
+		cout<<"     |  Ingrese (-1) para salir del menú, si desea agregar un nuevo producto ingrese (1): "; cin>>respuesta;
 		cout<<"      -------------------------------------------------------------------------------------"<<endl;
 		system("pause");
 		system("CLS");

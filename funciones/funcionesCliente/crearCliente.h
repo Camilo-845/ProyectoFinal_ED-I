@@ -10,31 +10,30 @@ void crearCliente(Cliente **cabezaPtr)
 		Cliente *nuevo = new Cliente;
 		nuevo->sig = NULL;
 
-		cout << "Digite su cedula: ";
+		cout << "       |   Confirme la cédula del cliente: ";
 		cin >> nuevo->cedula;
 		Cliente *validacionCliente = buscarCliente(*cabezaPtr, nuevo->cedula);
-		if (validacionCliente != NULL)
-		{
+		if (validacionCliente != NULL){
 
-			do
-			{
-				cout << "Esta cedula ya esta registrada ingrese una nueva cedula: ";
+			do{
+				cout << "       |   Esta cédula ya esta registrada, porfavor ingrese una nueva cédula: ";
 				cin >> nuevo->cedula;
+				
 			} while (buscarCliente(*cabezaPtr, nuevo->cedula) != NULL);
 		}
 
-		cout << "Ingrese su Nombre y Apellido: ";
+		cout << "       |   Ingrese su Nombre y Apellido: ";
 		cin.ignore();
 		getline(cin, nuevo->nombre);
-		cout << endl;
 
-		cout << "Ingrese su direcciï¿½n: ";
-		cin >> nuevo->direccion;
+		cout << "       |   Ingrese su dirección: ";
+		cin.ignore();
+		getline(cin, nuevo->direccion);
 
-		cout << "Ingrese su numero telefonico: ";
+		cout << "       |   Ingrese su número telefónico: ";
 		cin >> nuevo->numero;
 
-		cout << "Ingrese su corre electronico: ";
+		cout << "       |   Ingrese su correo electrónico: ";
 		cin >> nuevo->email;
 
 		if (*cabezaPtr == NULL)
@@ -44,14 +43,17 @@ void crearCliente(Cliente **cabezaPtr)
 		else
 		{
 			Cliente *iter = *cabezaPtr;
-			for (; iter->sig != NULL; iter = iter->sig)
-				;
+			for (; iter->sig != NULL; iter = iter->sig);
 			iter->sig = nuevo;
 		}
 
-		system("CLS");
 		cout << endl;
-		cout << "Ingrese (-1) para salir del menu si desea agregar un nuevo cliente ingrese (1): ";
-		cin >> respuesta;
+		cout << "        ------------------------------------------------------------------------------------- " << endl ;
+		cout << "       |   Ingrese (-1) para salir del menú, si desea agregar un nuevo cliente ingrese (1): "; cin >> respuesta;
+		cout << "       |_____________________________________________________________________________________|"<<endl;
+    	cout << "       |_____________________________________________________________________________________| "<<endl;
+		cout<<endl;
+		system("pause");
+		system("CLS");
 	} while (respuesta != -1);
 }
