@@ -38,7 +38,9 @@ void crearProducto(Producto **cabezaPtr){
 			nuevo->codigo = codigo;
 		}
 		else{
-			nuevo->codigo = incrementarCodigo(codigo);
+			Producto *iter = *cabezaPtr;
+			for(;iter->sig != NULL; iter = iter->sig );
+			nuevo->codigo = incrementarCodigo(iter->codigo);
 		}
 		
 		cout << "Ingrese la descripción del producto: ";
