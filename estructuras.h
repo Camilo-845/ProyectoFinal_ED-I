@@ -56,5 +56,5 @@ Factura *cabezaFactura = NULL;
 #include "funciones/funcionesProducto.h"
 #include "funciones/funcionesCliente.h"
 #include "funciones/funcionesDetalle.h"
-#include "funciones/funcionesMenu.h"
 #include "Funciones/funcionesFactura.h"
+#include "funciones/funcionesMenu.h"

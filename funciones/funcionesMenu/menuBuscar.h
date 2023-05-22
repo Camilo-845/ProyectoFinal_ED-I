@@ -29,16 +29,18 @@ void menuBuscar(){
 				string cedula;
 				cout<<" Digite la cedula del usurio a buscar: ";
 				cin>>cedula;
-				buscarCliente(cabezaCliente, cedula);
-				imprimirCliente(cabezaCliente);
+				
+				Cliente *iter = buscarCliente(cabezaCliente, cedula);
+				imprimirCliente(iter);	
 				break;
 			}
 			case 2:{
 				string codigo;
-				cout<<" Ingrese el codigo del producto a buscar: ";
+				cout<<" Ingrese el código del producto a buscar: ";
 				cin>>codigo;
-				buscarProducto(cabezaProducto, codigo);
-				imprimirProducto(cabezaProducto);
+				
+				Producto *iter = buscarProducto(cabezaProducto, codigo);
+				imprimirProducto(iter);
 				break;
 			}
 			case 3:{

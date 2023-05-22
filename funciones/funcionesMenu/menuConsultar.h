@@ -34,7 +34,7 @@ void menuConsultar(){
 				break;
 			}
 			case 3:{
-				//esperando consultarFacturas();
+				consultarFactura(cabezaFactura);
 				break;
 			}
 			case -1 :{

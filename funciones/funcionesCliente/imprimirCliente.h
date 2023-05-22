@@ -4,6 +4,13 @@ using namespace std;
 void imprimirCliente(Cliente *cabezaPtr){
 	
 	setlocale(LC_ALL, "");
+	cout << "        ____________________________________________________________________" << endl;
+    cout << "       |                                                                    | " << endl;
+    if(cabezaPtr == NULL){
+    	
+        cout <<"       |   No se ha encontrado el usario.                             " << endl;
+        cout <<"       |   Porfavor intente nuevamente....                            " << endl;
+    }
 	
 	for(Cliente *iter = cabezaPtr; iter != NULL; iter = iter->sig){
 		
@@ -13,12 +20,12 @@ void imprimirCliente(Cliente *cabezaPtr){
 		cout<<"               Nombre: "<<iter->nombre<<endl;
 		cout<<"               E-mail: "<<iter->email<<endl;
 		cout<<"               Número: "<<iter->numero<<endl;
-		cout<<"                Dirección: "<<iter->direccion<<endl;
+		cout<<"               Dirección: "<<iter->direccion<<endl;
 		cout<<" 		    ------------------------                                         " << endl;
-		cout<<" 		|                                                                    |" << endl;
-    	cout<<" 		|____________________________________________________________________| " << endl;
-    	cout<<endl;
 	}
+	cout<<"       |                                                                    |" << endl;
+    cout<<"       |____________________________________________________________________| " << endl;
+    cout<<endl;
 	
 }
 
