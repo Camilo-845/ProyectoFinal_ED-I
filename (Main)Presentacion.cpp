@@ -60,12 +60,10 @@ int main() {
 				menuConsultar();
 				break;
 			}
-			/*
 			case 6:{
-				ordenarPorInsercion(&cabeza);
+				menuBuscar();
 				break;
 			}
-			*/
 			case -1 :{
 				cout<<endl;
 				cout<<"Saliendo...."<<endl;
