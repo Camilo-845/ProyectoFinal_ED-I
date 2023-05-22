@@ -41,7 +41,7 @@ void menuCambiarStock(){
 				break;
 			}
 			case 2:{
-				//esperando venderProducto();
+				crearFactura(&cabezaFactura, &cabezaCliente, &cabezaProducto);
 				break;
 			}
 			case -1 :{
