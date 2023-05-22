@@ -26,11 +26,11 @@ void menuConsultar(){
 		system("cls");
 		switch(respuesta){
 			case 1:{
-				//esperando consultarClientes();
+				consultarClientes(cabezaCliente);
 				break;
 			}
 			case 2:{
-				//esperando consultarProductos();
+				consultarProductos(cabezaProducto);
 				break;
 			}
 			case 3:{

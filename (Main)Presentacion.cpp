@@ -17,15 +17,15 @@ int main() {
 		cout<<"                                                                             "<<endl;
 		cout<<" 		 __________________________________________________________________" <<endl;
 		cout<<" 		|                                                                  | "<<endl;
-		cout<<" 		|      Bienvenido al menú principal                                | "<<endl;
+		cout<<" 		|      Bienvenido al Menú Principal                                | "<<endl;
 		cout<<" 		|    Elija una de las siguientes opciones:                         | "<<endl;
 		cout<<" 		|                                                                  | "<<endl;
 		cout<<" 		|    1. Agregar Producto                                           | "<<endl;
 		cout<<" 		|    2. Cambiar el Precio                                          | "<<endl;
 		cout<<" 		|    3. Menu Cambiar stock: (comprar/vender)                       | "<<endl;
 		cout<<" 		|    4. Eliminar producto                                          | "<<endl;
-		cout<<" 		|    5. Menu Consultar : (Clientes/Productos/Facturas)             | "<<endl;
-		cout<<" 		|    6. Menu Buscar :  (Cliente/Producto/Factura)                  | "<<endl;
+		cout<<" 		|    5. Menú Consultar : (Clientes/Productos/Facturas)             | "<<endl;
+		cout<<" 		|    6. Menú Buscar :  (Cliente/Producto/Factura)                  | "<<endl;
 		cout<<" 		|                                                                  | "<<endl;
 		cout<<" 		|    Para salir ingrese -1                                         | "<<endl;
 		cout<<" 		|__________________________________________________________________| "<<endl;

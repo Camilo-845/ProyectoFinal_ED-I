@@ -11,14 +11,14 @@ void menuBuscar(){
 	do{
 		cout<<"  __________________________________________________________________"<<endl;
 		cout<<" |                                                                  |"<<endl;
-		cout<<" |      Bienvenido al Menú de Busqueda                              |"<<endl;
+		cout<<" |      Bienvenido al Menú de Búsqueda                              |"<<endl;
 		cout<<" |    Elija una de las siguientes opciones:                         |"<<endl;
 		cout<<" |                                                                  |"<<endl;
 		cout<<" |    1. Buscar Cliente                                             |"<<endl;
 		cout<<" |    2. Buscar Producto                                            |"<<endl;
 		cout<<" |    3. Buscar Factura                                             |"<<endl;
 		cout<<" |                                                                  |"<<endl;
-		cout<<" |    Para salir del Menú de Busqueda ingrese  -1                   |"<<endl;
+		cout<<" |    Para salir del Menú de Búsqueda ingrese  -1                   |"<<endl;
 		cout<<" |__________________________________________________________________|"<<endl;
 		
 		cout<<endl<<"Ingrese su opción: ";											
