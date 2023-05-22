@@ -2,9 +2,7 @@
 #include <wchar.h>
 #include <locale.h>
 
-
 using namespace std;
-
 
 int main() {
 	
@@ -22,7 +20,7 @@ int main() {
 		cout<<" 		|                                                                  | "<<endl;
 		cout<<" 		|    1. Agregar Producto                                           | "<<endl;
 		cout<<" 		|    2. Cambiar el Precio                                          | "<<endl;
-		cout<<" 		|    3. Menu Cambiar stock: (comprar/vender)                       | "<<endl;
+		cout<<" 		|    3. Menú Cambiar stock: (comprar/vender)                       | "<<endl;
 		cout<<" 		|    4. Eliminar producto                                          | "<<endl;
 		cout<<" 		|    5. Menú Consultar : (Clientes/Productos/Facturas)             | "<<endl;
 		cout<<" 		|    6. Menú Buscar :  (Cliente/Producto/Factura)                  | "<<endl;

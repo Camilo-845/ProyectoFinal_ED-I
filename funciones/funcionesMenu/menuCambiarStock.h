@@ -38,6 +38,7 @@ void menuCambiarStock(){
 					cout<<"  Porfavor registre el nuevo artículo...";
 					crearProducto(&cabezaProducto);
 				}
+				system("pause");
 				break;
 			}
 			case 2:{

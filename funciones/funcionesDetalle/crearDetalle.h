@@ -18,7 +18,7 @@ void crearDetalle(Detalle **cabezaPtr, Producto **cabezaProducto)
         if (productoEncontrado != NULL){
         	
             nuevo->codigoProducto = "AR" + codigoProducto;
-            cout << "       |    Ingrese la cantidad de artículos: " << endl;
+            cout << "       |    Ingrese la cantidad de artículos " << endl;
             if (productoEncontrado->stock == 0){
             	
                 cout << "       |     (No hay artículos disponibles)" << endl;
@@ -27,7 +27,7 @@ void crearDetalle(Detalle **cabezaPtr, Producto **cabezaProducto)
             else{
             	
                 do{
-                    cout << "       |     (Debe ser una cantidad mayor a '0'y menor a "<<productoEncontrado->stock<<" : " ;
+                    cout << "       |     (Debe ser una cantidad mayor a '0'y menor a "<<productoEncontrado->stock<<") : " ;
                     cin >> nuevo->cantidad;
                     
                 } while (nuevo->cantidad <= 0 || nuevo->cantidad > productoEncontrado->stock);

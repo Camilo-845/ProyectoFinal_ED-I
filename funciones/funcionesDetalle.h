@@ -1,1 +1,1 @@
-#include "./funcionesDetalle/crearDetalle.h"
+#include "funcionesDetalle/crearDetalle.h"
