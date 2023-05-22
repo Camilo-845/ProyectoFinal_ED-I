@@ -43,24 +43,24 @@ void crearProducto(Producto **cabezaPtr){
 			nuevo->codigo = incrementarCodigo(iter->codigo);
 		}
 		
-		cout << "Ingrese la descripción del producto: ";
+		cout<<"      ___________________________________________________________________________________"<<endl;
+		cout<<"     |                                                                                   |"<<endl;
+		cout<<"           Ingrese la descripción del producto: ";
 		cin.ignore();
     	getline(cin, nuevo->descripcion);
     	cout<<endl;
 		
-		cout<<"Ingrese el valor unitario del producto";
-		cout<<endl;
+		cout<<"           Ingrese el valor unitario del producto"<<endl;
 		do{
-			cout<<"(Debe ser una cantidad mayor a '0'): ";
+			cout<<"           (Debe ser una cantidad mayor a '0'): ";
 			cin>>nuevo->valorUnitario;
 			cout<<endl;
 		}
 		while(nuevo->valorUnitario <= 0);
 		
-		cout<<"Ingrese el numero de articulos disponibles";
-		cout<<endl;
+		cout<<"           Ingrese el numero de articulos disponibles"<<endl;
 		do{
-			cout<<"(Debe ser una cantidad mayor a '0'): ";
+			cout<<"           (Debe ser una cantidad mayor a '0'): ";
 			cin>>nuevo->stock;
 			cout<<endl;
 		}
@@ -75,10 +75,11 @@ void crearProducto(Producto **cabezaPtr){
 			iter->sig = nuevo;
 		}
 		
+		cout<<"     |_____________________________________________________________________________________|"<<endl;
+		cout<<"     |  Ingrese (-1) para salir del menu si desea agregar un nuevo producto ingrese (1): "; cin>>respuesta;
+		cout<<"      -------------------------------------------------------------------------------------"<<endl;
+		system("pause");
 		system("CLS");
-		cout<<endl;
-		cout<<"Ingrese (-1) para salir del menu si desea agregar un nuevo producto ingrese (1): ";
-		cin>>respuesta;
 	}
 	while(respuesta != -1);	
 }

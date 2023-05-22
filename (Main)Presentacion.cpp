@@ -50,7 +50,7 @@ int main() {
 				}
 				else{
 					cout<<"El codigo ingresado no se encuentra en nuestra base de datos."<<endl;
-					cout<<"Porfavor intente nuevamente";
+					cout<<"Porfavor intente nuevamente...";
 				}
 				break;
 			}
