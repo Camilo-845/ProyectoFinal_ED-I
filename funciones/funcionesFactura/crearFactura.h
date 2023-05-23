@@ -55,7 +55,9 @@ void crearFactura(Factura **cabezaPtr, Cliente **cabezaCliente, Producto **cabez
             }
         } while (clienteEncontrado == NULL);
         nuevo->cliente = clienteEncontrado;
+        
         crearDetalle(&cabezaDetalle, cabezaProducto);
+        
         nuevo->cabezaDetalle = cabezaDetalle;
         int total = 0;
         for (Detalle *iter = cabezaDetalle; iter != NULL; iter = iter->sig){
