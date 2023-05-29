@@ -1,27 +1,24 @@
 
 using namespace std;
 
-void imprimirProducto(Producto *cabezaPtr){
-	
+void imprimirProducto (Producto *cabezaPtr){
 	setlocale(LC_ALL, "");
 	cout << "        ____________________________________________________________________" << endl;
     cout << "       |                                                                    | " << endl;
-    if(cabezaPtr == NULL){
+    if (cabezaPtr == NULL) {
     	
-        cout <<"       |   No se ha encontrado el producto.                           " << endl;
-        cout <<"       |   Porfavor intente nuevamente....                            " << endl;
-    }
-	else{
+        cout << "       |   No se ha encontrado el producto.                           " << endl;
+        cout << "       |   Porfavor intente nuevamente....                            " << endl;
+    } else {
 		
-		cout<<"            La información del producto con el código ("<<cabezaPtr->codigo<<") es: "<<endl<<endl;
-		cout<<"               Descripción: "<<cabezaPtr->descripcion<<endl;
-		cout<<"               Valor Unitario: $"<<cabezaPtr->valorUnitario<<endl;
-		cout<<"               stock: "<<cabezaPtr->stock<<endl;
-		cout<<"           ------------------------                                          " << endl;	
+		cout << "            La informaciÃ³n del producto con el cÃ³digo (" << cabezaPtr->codigo << ") es: " << endl << endl;
+		cout << "               DescripciÃ³n: " << cabezaPtr->descripcion << endl;
+		cout << "               Valor Unitario: $" << cabezaPtr->valorUnitario << endl;
+		cout << "               Stock: " << cabezaPtr->stock << endl;
+		cout << "           ------------------------                                          " << endl;	
 	}	
 
-	cout<<"       |                                                                    |" << endl;
-    cout<<"       |____________________________________________________________________|" << endl;
-    cout<<endl;
-	
+	cout << "       |                                                                    |" << endl;
+    cout << "       |____________________________________________________________________|" << endl;
+    cout << endl;
 }

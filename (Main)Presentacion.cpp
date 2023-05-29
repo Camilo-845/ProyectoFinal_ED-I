@@ -4,86 +4,86 @@
 
 using namespace std;
 
-int main() {
+int main () {
 	
     int respuesta;
 	int info;
-	setlocale(LC_ALL, "");
+	setlocale (LC_ALL, "");
 	
-	do{
-		cout<<" 	                                                                        "<<endl;
-		cout<<"                                                                             "<<endl;
-		cout<<" 		 __________________________________________________________________" <<endl;
-		cout<<" 		|                                                                  | "<<endl;
-		cout<<" 		|      Bienvenido al Menú Principal                                | "<<endl;
-		cout<<" 		|    Elija una de las siguientes opciones:                         | "<<endl;
-		cout<<" 		|                                                                  | "<<endl;
-		cout<<" 		|    1. Agregar Producto                                           | "<<endl;
-		cout<<" 		|    2. Cambiar el Precio                                          | "<<endl;
-		cout<<" 		|    3. Menú Cambiar stock: (comprar/vender)                       | "<<endl;
-		cout<<" 		|    4. Eliminar producto                                          | "<<endl;
-		cout<<" 		|    5. Menú Consultar : (Clientes/Productos/Facturas)             | "<<endl;
-		cout<<" 		|    6. Menú Buscar :  (Cliente/Producto/Factura)                  | "<<endl;
-		cout<<" 		|                                                                  | "<<endl;
-		cout<<" 		|    Para salir ingrese -1                                         | "<<endl;
-		cout<<" 		|__________________________________________________________________| "<<endl;
+	do {
+		cout<<" 	                                                                        "<< endl;
+		cout<<"                                                                             "<< endl;
+		cout<<" 		 __________________________________________________________________" << endl;
+		cout<<" 		|                                                                  | "<< endl;
+		cout<<" 		|      Bienvenido al MenÃº Principal                                | "<< endl;
+		cout<<" 		|    Elija una de las siguientes opciones:                         | "<< endl;
+		cout<<" 		|                                                                  | "<< endl;
+		cout<<" 		|    1. Agregar Producto                                           | "<< endl;
+		cout<<" 		|    2. Cambiar el Precio                                          | "<< endl;
+		cout<<" 		|    3. MenÃº Cambiar Stock: (comprar/vender)                       | "<< endl;
+		cout<<" 		|    4. Eliminar Producto                                          | "<< endl;
+		cout<<" 		|    5. MenÃº Consultar: (Clientes/Productos/Facturas)             | "<< endl;
+		cout<<" 		|    6. MenÃº Buscar:  (Cliente/Producto/Factura)                  | "<< endl;
+		cout<<" 		|                                                                  | "<< endl;
+		cout<<" 		|    Para salir ingrese -1                                         | "<< endl;
+		cout<<" 		|__________________________________________________________________| "<< endl;
 		
-		cout<<endl<<"	Ingrese su opción: ";											
+		cout<< endl<<"	Ingrese su opciÃ³n: ";											
 		cin>>respuesta;
 		system("cls");
-		cout<<endl;
+		cout<< endl;
 		switch(respuesta){
-			case 1:{
-				crearProducto(&cabezaProducto);
+			case 1: {
+				crearProducto (&cabezaProducto);
 				break;
 			}
-			case 2:{
+			case 2: {
 				string codigo;
-				cout<<" Ingrese el código del producto a buscar: ";
+				cout<<" Ingrese el cÃ³digo del producto a buscar: ";
 				cin>>codigo;
 				
-				Producto *iter = buscarProducto(cabezaProducto, codigo);
-				if(iter != NULL){
-					cambiarPrecioProducto(iter);	
+				Producto *iter = buscarProducto (cabezaProducto, codigo);
+				if (iter != NULL){
+					cambiarPrecioProducto (iter);	
 				}
-				else{
-					cout<<"  El código del artículo no se encuentra en nuestra base de datos."<<endl;
+				else {
+					cout<<"  El cÃ³digo del artÃ­culo no se encuentra en nuestra base de datos."<< endl;
 					cout<<"  Porfavor intente nuevamente...";
 				}
 				break;
 			}
-			case 3:{
-				menuCambiarStock();
+			case 3: {
+				menuCambiarStock ();
 				break;
 			}
-			case 4:{
-				eliminarProducto(&cabezaProducto, cabezaFactura);
-				system("pause");
+			case 4: {
+				eliminarProducto (&cabezaProducto, cabezaFactura);
+				system ("pause");
 				break;
 			}
-			case 5:{
-				menuConsultar();
+			case 5: {
+				menuConsultar ();
 				break;
 			}
-			case 6:{
-				menuBuscar();
+			case 6: {
+				menuBuscar ();
 				break;
 			}
-			case -1 :{
-				cout<<endl;
-				cout<<"   Saliendo...."<<endl;
-				cout<<"   ";system("pause");
+			case -1: {
+				cout<< endl;
+				cout<<"   Saliendo...."<< endl;
+				cout<<"   "; system ("pause");
 				break;
 			}
-			default:{
-				cout<<endl;
-				cout<<"   Opción invalida........"<<endl;
+			default: {
+				cout<< endl;
+				cout<<"   OpciÃ³n invÃ¡lida........"<< endl;
 				cout<<"   ";system("pause");
 				break;
 			} 
 		}
-		system("cls");
-	}while(respuesta != -1);
+		system ("cls");
+	} while (respuesta != -1);
 	
 	return 0;
 }

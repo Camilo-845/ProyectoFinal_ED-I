@@ -1,64 +1,61 @@
 
 using namespace std;
 
-void menuCambiarStock(){
-	
+void menuCambiarStock() {
     int respuesta;
 	int info;
-	setlocale(LC_ALL, "");
+	setlocale (LC_ALL, "");
 	
-	
-	do{
-		cout<<"  __________________________________________________________________"<<endl;
-		cout<<" |                                                                  |"<<endl;
-		cout<<" |      Bienvenido al Menú Cambiar Stock                            |"<<endl;
-		cout<<" |    Elija una de las siguientes opciones:                         |"<<endl;
-		cout<<" |                                                                  |"<<endl;
-		cout<<" |    1. Comprar Producto                                           |"<<endl;
-		cout<<" |    2. Vender Producto                                            |"<<endl;
-		cout<<" |                                                                  |"<<endl;
-		cout<<" |    Para salir del Menú Stock ingrese  -1                         |"<<endl;
-		cout<<" |__________________________________________________________________|"<<endl;
+	do {
+		cout << "  __________________________________________________________________" << endl;
+		cout << " |                                                                  |" << endl;
+		cout << " |      Bienvenido al MenÃº Cambiar Stock                            |" << endl;
+		cout << " |    Elija una de las siguientes opciones:                         |" << endl;
+		cout << " |                                                                  |" << endl;
+		cout << " |    1. Comprar Producto                                           |" << endl;
+		cout << " |    2. Vender Producto                                            |" << endl;
+		cout << " |                                                                  |" << endl;
+		cout << " |    Para salir del MenÃº Stock ingrese  -1                         |" << endl;
+		cout << " |__________________________________________________________________|" << endl;
 		
-		cout<<endl<<"Ingrese su opción: ";											
-		cin>>respuesta;
-		system("cls");
-		switch(respuesta){
-			case 1:{
+		cout << endl << "Ingrese su opciÃ³n: ";											
+		cin >> respuesta;
+		system ("cls");
+		switch (respuesta) {
+			case 1: {
 				string codigo;
-				cout<<" Ingrese el código del producto a buscar: ";
-				cin>>codigo;
+				cout << " Ingrese el cÃ³digo del producto a buscar: ";
+				cin >> codigo;
 				
-				Producto *iter = buscarProducto(cabezaProducto, codigo);
-				if(iter != NULL){
-					cambiarStockProducto(iter);	
+				Producto *iter = buscarProducto (cabezaProducto, codigo);
+				if (iter != NULL) {
+					cambiarStockProducto (iter);	
+				} else {
+					cout << "  El cÃ³digo del producto no se encuentra registrado." << endl;
+					cout << "  Porfavor registre el nuevo artÃ­culo...";
+					crearProducto (&cabezaProducto);
 				}
-				else{
-					cout<<"  El código del producto no se encuentra registrado."<<endl;
-					cout<<"  Porfavor registre el nuevo artículo...";
-					crearProducto(&cabezaProducto);
-				}
-				system("pause");
+				system ("pause");
 				break;
 			}
-			case 2:{
-				crearFactura(&cabezaFactura, &cabezaCliente, &cabezaProducto);
-				system("pause");
+			case 2: {
+				crearFactura (&cabezaFactura, &cabezaCliente, &cabezaProducto);
+				system ("pause");
 				break;
 			}
-			case -1 :{
-				cout<<endl;
-				cout<<"Saliendo...."<<endl;
-				system("pause");
+			case -1: {
+				cout << endl;
+				cout << "Saliendo...." << endl;
+				system ("pause");
 				break;
 			}
-			default:{
-				cout<<endl;
-				cout<<"Opción invalida........"<<endl;
-				system("pause");
+			default: {
+				cout << endl;
+				cout << "OpciÃ³n invalida........" << endl;
+				system ("pause");
 				break;
 			} 
 		}
-		system("cls");
-	}while(respuesta != -1);
+		system ("cls");
+	} while (respuesta != -1);
 }

@@ -1,47 +1,41 @@
 
 using namespace std;
 
-void crearCliente(Cliente **cabezaPtr)
-{
+void crearCliente (Cliente **cabezaPtr) {
 	int respuesta = 1;
 
-	do
-	{
+	do {
 		Cliente *nuevo = new Cliente;
 		nuevo->sig = NULL;
 
-		cout << "       |   Confirme la cédula del cliente: ";
+		cout << "       |   Confirme la cÃ©dula del cliente: ";
 		cin >> nuevo->cedula;
-		Cliente *validacionCliente = buscarCliente(*cabezaPtr, nuevo->cedula);
-		if (validacionCliente != NULL){
-
-			do{
-				cout << "       |   Esta cédula ya esta registrada, porfavor ingrese una nueva cédula: ";
+		Cliente *validacionCliente = buscarCliente (*cabezaPtr, nuevo->cedula);
+		if (validacionCliente != NULL) {
+			do {
+				cout << "       |   Esta cÃ©dula ya esta registrada, porfavor ingrese una nueva cÃ©dula: ";
 				cin >> nuevo->cedula;
 				
-			} while (buscarCliente(*cabezaPtr, nuevo->cedula) != NULL);
+			} while (buscarCliente (*cabezaPtr, nuevo->cedula) != NULL);
 		}
 
 		cout << "       |   Ingrese su Nombre y Apellido: ";
-		cin.ignore();
-		getline(cin, nuevo->nombre);
+		cin.ignore ();
+		getline (cin, nuevo->nombre);
 
-		cout << "       |   Ingrese su dirección: ";
-		cin.ignore();
-		getline(cin, nuevo->direccion);
+		cout << "       |   Ingrese su direcciÃ³n: ";
+		cin.ignore ();
+		getline (cin, nuevo->direccion);
 
-		cout << "       |   Ingrese su número telefónico: ";
+		cout << "       |   Ingrese su nÃºmero telefÃ³nico: ";
 		cin >> nuevo->numero;
 
-		cout << "       |   Ingrese su correo electrónico: ";
+		cout << "       |   Ingrese su correo electrÃ³nico: ";
 		cin >> nuevo->email;
 
-		if (*cabezaPtr == NULL)
-		{
+		if (*cabezaPtr == NULL) {
 			*cabezaPtr = nuevo;
-		}
-		else
-		{
+		} else {
 			Cliente *iter = *cabezaPtr;
 			for (; iter->sig != NULL; iter = iter->sig);
 			iter->sig = nuevo;
@@ -49,11 +43,11 @@ void crearCliente(Cliente **cabezaPtr)
 
 		cout << endl;
 		cout << "        ------------------------------------------------------------------------------------- " << endl ;
-		cout << "       |   Ingrese (-1) para salir del menú, si desea agregar un nuevo cliente ingrese (1): "; cin >> respuesta;
-		cout << "       |_____________________________________________________________________________________|"<<endl;
-    	cout << "       |_____________________________________________________________________________________| "<<endl;
-		cout<<endl;
-		system("pause");
-		system("CLS");
+		cout << "       |   Ingrese (-1) para salir del menÃº, si desea agregar un nuevo cliente ingrese (1): "; cin >> respuesta;
+		cout << "       |_____________________________________________________________________________________|" << endl;
+    	cout << "       |_____________________________________________________________________________________| " << endl;
+		cout << endl;
+		system ("pause");
+		system ("CLS");
 	} while (respuesta != -1);
 }

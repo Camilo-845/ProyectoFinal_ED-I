@@ -2,68 +2,66 @@
 using namespace std;
 
 void menuBuscar(){
-	
     int respuesta;
 	int info;
-	setlocale(LC_ALL, "");
+	setlocale (LC_ALL, "");
 	
-	
-	do{
-		cout<<"  __________________________________________________________________"<<endl;
-		cout<<" |                                                                  |"<<endl;
-		cout<<" |      Bienvenido al Menú de Búsqueda                              |"<<endl;
-		cout<<" |    Elija una de las siguientes opciones:                         |"<<endl;
-		cout<<" |                                                                  |"<<endl;
-		cout<<" |    1. Buscar Cliente                                             |"<<endl;
-		cout<<" |    2. Buscar Producto                                            |"<<endl;
-		cout<<" |    3. Buscar Factura                                             |"<<endl;
-		cout<<" |                                                                  |"<<endl;
-		cout<<" |    Para salir del Menú de Búsqueda ingrese  -1                   |"<<endl;
-		cout<<" |__________________________________________________________________|"<<endl;
+	do {
+		cout << "  __________________________________________________________________"  <<endl;
+		cout << " |                                                                  | " <<endl;
+		cout << " |      Bienvenido al MenÃº de BÃºsqueda                              | " <<endl;
+		cout << " |    Elija una de las siguientes opciones:                         | " <<endl;
+		cout << " |                                                                  | " <<endl;
+		cout << " |    1. Buscar Cliente                                             | " <<endl;
+		cout << " |    2. Buscar Producto                                            | " <<endl;
+		cout << " |    3. Buscar Factura                                             | " <<endl;
+		cout << " |                                                                  | " <<endl;
+		cout << " |    Para salir del MenÃº de BÃºsqueda ingrese  -1                   | " <<endl;
+		cout << " |__________________________________________________________________| " <<endl;
 		
-		cout<<endl<<"Ingrese su opción: ";											
-		cin>>respuesta;
-		system("cls");
-		switch(respuesta){
-			case 1:{
+		cout << endl << "Ingrese su opciÃ³n: ";											
+		cin >> respuesta;
+		system ("cls");
+		switch (respuesta) {
+			case 1: {
 				string cedula;
-				cout<<" Digite la cedula del usurio a buscar: ";
-				cin>>cedula;
+				cout << " Digite la cÃ©dula del usurio a buscar: ";
+				cin >> cedula;
 				
-				Cliente *iter = buscarCliente(cabezaCliente, cedula);
-				imprimirCliente(iter);	
+				Cliente *iter = buscarCliente (cabezaCliente, cedula);
+				imprimirCliente (iter);	
 				break;
 			}
-			case 2:{
+			case 2: {
 				string codigo;
-				cout<<" Ingrese el código del producto a buscar: ";
-				cin>>codigo;
+				cout << " Ingrese el cÃ³digo del producto a buscar: ";
+				cin >> codigo;
 				
-				Producto *iter = buscarProducto(cabezaProducto, codigo);
-				imprimirProducto(iter);
+				Producto *iter = buscarProducto (cabezaProducto, codigo);
+				imprimirProducto (iter);
 				break;
 			}
-			case 3:{
+			case 3: {
 				int numero;
-				cout<<" Ingrese el numero de la factura a buscar: ";
-				cin>>numero;
+				cout << " Ingrese el nÃºmero de la factura a buscar: ";
+				cin >> numero;
 					
-				Factura *iter = buscarFactura(cabezaFactura, numero);
-				imprimirFactura(iter);
+				Factura *iter = buscarFactura (cabezaFactura, numero);
+				imprimirFactura (iter);
 				break;
 			}
-			case -1 :{
-				cout<<endl;
-				cout<<"Saliendo...."<<endl;
+			case -1: {
+				cout << endl;
+				cout << "Saliendo...." << endl;
 				break;
 			}
-			default:{
-				cout<<endl;
-				cout<<"Opción invalida........"<<endl;
+			default: {
+				cout << endl;
+				cout << "OpciÃ³n invÃ¡lida........" << endl;
 				break;
 			} 
 		}
-		system("pause");
-		system("cls");
-	}while(respuesta != -1);
+		system ("pause");
+		system ("cls");
+	} while (respuesta != -1);
 }

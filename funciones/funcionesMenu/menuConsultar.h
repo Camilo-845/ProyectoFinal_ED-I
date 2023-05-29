@@ -1,54 +1,52 @@
 
 using namespace std;
 
-void menuConsultar(){
-	
+void menuConsultar() {
     int respuesta;
 	int info;
-	setlocale(LC_ALL, "");
+	setlocale (LC_ALL, "");
 	
-	
-	do{
-		cout<<"  __________________________________________________________________"<<endl;
-		cout<<" |                                                                  |"<<endl;
-		cout<<" |      Bienvenido al Menú de Consulta                              |"<<endl;
-		cout<<" |    Elija una de las siguientes opciones:                         |"<<endl;
-		cout<<" |                                                                  |"<<endl;
-		cout<<" |    1. Consultar Clientes                                         |"<<endl;
-		cout<<" |    2. Consultar Productos                                        |"<<endl;
-		cout<<" |    3. Consultar Facturas                                         |"<<endl;
-		cout<<" |                                                                  |"<<endl;
-		cout<<" |    Para salir del Menú de Consulta ingrese  -1                   |"<<endl;
-		cout<<" |__________________________________________________________________|"<<endl;
+	do {
+		cout << "  __________________________________________________________________" << endl;
+		cout << " |                                                                  |" << endl;
+		cout << " |      Bienvenido al MenÃº de Consulta                              |" << endl;
+		cout << " |    Elija una de las siguientes opciones:                         |" << endl;
+		cout << " |                                                                  |" << endl;
+		cout << " |    1. Consultar Clientes                                         |" << endl;
+		cout << " |    2. Consultar Productos                                        |" << endl;
+		cout << " |    3. Consultar Facturas                                         |" << endl;
+		cout << " |                                                                  |" << endl;
+		cout << " |    Para salir del MenÃº de Consulta ingrese  -1                   |" << endl;
+		cout << " |__________________________________________________________________|" << endl;
 		
-		cout<<endl<<"Ingrese su opción: ";											
-		cin>>respuesta;
-		system("cls");
-		switch(respuesta){
-			case 1:{
-				consultarClientes(cabezaCliente);
+		cout << endl << "Ingrese su opciÃ³n: ";											
+		cin >> respuesta;
+		system ("cls");
+		switch (respuesta) {
+			case 1: {
+				consultarClientes (cabezaCliente);
 				break;
 			}
-			case 2:{
-				consultarProductos(cabezaProducto);
+			case 2: {
+				consultarProductos (cabezaProducto);
 				break;
 			}
-			case 3:{
-				consultarFactura(cabezaFactura);
+			case 3: {
+				consultarFactura (cabezaFactura);
 				break;
 			}
-			case -1 :{
-				cout<<endl;
-				cout<<"Saliendo...."<<endl;
+			case -1: {
+				cout << endl;
+				cout << "Saliendo...." << endl;
 				break;
 			}
-			default:{
-				cout<<endl;
-				cout<<"Opción invalida........"<<endl;
+			default: {
+				cout << endl;
+				cout << "OpciÃ³n invÃ¡lida........" <<endl;
 				break;
 			} 
 		}
-		system("pause");
-		system("cls");
-	}while(respuesta != -1);
+		system ("pause");
+		system ("cls");
+	} while (respuesta != -1);
 }

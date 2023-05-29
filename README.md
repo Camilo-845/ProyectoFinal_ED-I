@@ -26,4 +26,3 @@
   - Producto
   - Cantidad
   - Precio
-  
